@@ -22,7 +22,7 @@ function deslizar(numero_datos_mostrar){
     caja_subir_z_index.style="z-index: 4";
     taparOpcion.style="display:block; z-index:2;"
     noAbrido=false;
-  }else{
+}else{
     document.getElementById('cerrarDesplegado').style='display: none; z-index:0;';
     document.getElementById('fondo-abrido').style='display: none; z-index:0;';
     cajaEsondida.style="left:-50%; z-index:2;";
