@@ -1,17 +1,18 @@
 var noAbrido=true;
 function deslizar(numero_datos_mostrar){
+  var taparOpcion=document.getElementById('tapar_1');
   var cajaEsondida=document.getElementById('parte_escondida');
   if(numero_datos_mostrar==0){
     for (var i = 1; i <= 5; i++) {
       var flecha=document.getElementById('flecha_'+i);
       flecha.style="-webkit-transform: rotate(0deg);-moz-transform: rotate(0deg);-ms-transform: rotate(0deg);transform: rotate(0deg);";
+      taparOpcion.style="display:none; z-index:1;"
     }
   }else{
     var flecha=document.getElementById('flecha_'+numero_datos_mostrar);
+    var caja_subir_z_index=document.getElementById('caja_'+numero_datos_mostrar);
   }
   var opciones=document.getElementById('actividades');
-  var caja_subir_z_index=document.getElementById('caja_'+numero_datos_mostrar);
-  var taparOpcion=document.getElementById('tapar_1');
   if(noAbrido){
     document.getElementById('cerrarDesplegado').style='display: block; z-index:5;';
     document.getElementById('fondo-abrido').style='display: block; z-index:4;';

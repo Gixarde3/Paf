@@ -27,7 +27,6 @@ main{
   width: 100%;
   padding: 20px;
   background-color:#ffdcdc;
-  padding-top: 0px;
 }
 h1{
   font-weight: 800;
@@ -59,6 +58,18 @@ a{
 }
 main h2{
   font-size: 30px;
+  padding: 5px;
+  color: white;
+  width: 100%;
+  margin-bottom: 20px;
+  background-image: url('../img/madera_textura.jpeg');
+  border-radius: 10px 10px 10px 10px;
+  -moz-border-radius: 10px 10px 10px 10px;
+  -webkit-border-radius: 10px 10px 10px 10px;
+  border: 0px solid #000000;
+  -webkit-box-shadow: 0px 7px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 7px 5px 0px rgba(0,0,0,0.75);
+box-shadow: 0px 7px 5px 0px rgba(0,0,0,0.75);
 }
 .opciones{
   display: flex;
@@ -187,6 +198,7 @@ footer h2{
   font-size: 25px;
   position: absolute;
   display: flex;
+  align-items: center;
   flex-direction: column;
   justify-content: space-between;
   width: 20%;
@@ -201,6 +213,9 @@ footer h2{
 }
 #parte_escondida h2{
   font-size: 40px;
+}
+#parte_escondida img{
+  width: 30%;
 }
 .fondo-abrido{
   width: 100%;
@@ -221,7 +236,7 @@ input{
 }
 textarea{
   width: 90%;
-  height: 70%;
+  height: 50%;
   margin-bottom: 5px;
 }
 .seccion_boton{
@@ -306,4 +321,16 @@ textarea{
   width:100%;
   min-height: 60%;
   padding: 10px;
+}
+.derecha h2{
+  padding: 5px;
+  color: white;
+  background-image: url('../img/madera_textura.jpeg');
+  border-radius: 10px 10px 10px 10px;
+  -moz-border-radius: 10px 10px 10px 10px;
+  -webkit-border-radius: 10px 10px 10px 10px;
+  border: 0px solid #000000;
+  -webkit-box-shadow: 0px 7px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 7px 5px 0px rgba(0,0,0,0.75);
+box-shadow: 0px 7px 5px 0px rgba(0,0,0,0.75);
 }
