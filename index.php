@@ -1,4 +1,18 @@
 <!DOCTYPE html>
+<?php
+if(isset( $_POST['Enviar'])){
+  $to="antoniochavezmarco@gmail.com";
+  $subject="Sugerencia de ".$_POST['usuario'];
+  $message=$_POST['sugerencia'];
+  $headers = 'From: noreply@fap.com'.'\r\n';
+  $correo=@mail($to, $subject, $message, $headers);
+  if($correo){
+    echo "Mensaje enviado con éxito";
+  }else{
+    echo "No se puedo enviar el mail";
+  }
+}
+ ?>
 <html lang="es" dir="ltr">
   <head>
     <meta charset="utf-8">
@@ -24,7 +38,7 @@
           </div>
         <img src="img/abrazo_corazon.png" alt="Abrazo - P.A.F - Psicología al apoyo de la familia">
       </div>
-      <div class="redes">
+      <div class="redes pc">
         <a href="#"> <img src="img/facebook.svg" alt="P.A.F Facebook"> Psicología de tus emociones </a>
         <a href="https://wa.me/5217773450967"> <img src="img/whatsapp.svg" alt="Whatsapp - P.A.F Whatsapp"> 7773450967</a>
         <a href="https://wa.me/5217777880080"> <img src="img/whatsapp.svg" alt="Whatsapp - P.A.F Whatsapp"> 7777880080</a>
@@ -32,15 +46,18 @@
     </div>
     <div class="principal">
       <nav>
-        <button type="button" name="button" class="seccion_boton">Introducción</button>
-        <button type="button" name="button" class="seccion_boton">Misión</button>
-        <button type="button" name="button" class="seccion_boton">Visión</button>
+        <button type="button" name="button" class="seccion_boton" onclick="cambio(1)">Introducción</button>
+        <button type="button" name="button" class="seccion_boton" onclick="cambio(2)">Misión</button>
+        <button type="button" name="button" class="seccion_boton" onclick="cambio(3)">Visión</button>
       </nav>
       <div class="centro">
-        <main>
-          <h2>Introducción</h2>
-          <p class="parrafo">Si nos sentimos mal; si algo nos duele, buscamos un médico para que nos ayude a aliviar el dolor y nos explique lo que pasa. Pero si el dolor es más profundo, emocional, estamos acostumbrados a creer  que va a desaparecer en algún momento por sí solo, qué tal vez baste  con distraernos y apoyarnos en los que nos rodea. Sin embargo... ¿Qué ocurre cuando esto no es suficiente?</p>
-          <p class="parrafo">Cada uno  de nosotros hemos pasado por diferentes situaciones en la vida. Algunos de esos problemas conllevan una oleada de emociones, las cuales tratamos de sobrellevar lo mejor posible. Pero hay momentos que nos rebasan y sentimos que no encontramos la salida: la perdida de un familiar, exceso de necesidad por una pareja, violencia familiar entre muchas otras más. En esos casos es posible necesitar atención especializada.</p>
+        <main id=principal>
+          <h2 id=titulo>Introducción</h2>
+          <div id="contenido">
+            <p class="parrafo">Si nos sentimos mal; si algo nos duele, buscamos un médico para que nos ayude a aliviar el dolor y nos explique lo que pasa. Pero si el dolor es más profundo, emocional, estamos acostumbrados a creer  que va a desaparecer en algún momento por sí solo, qué tal vez baste  con distraernos y apoyarnos en los que nos rodea. Sin embargo... ¿Qué ocurre cuando esto no es suficiente?</p>
+            <p class="parrafo">Cada uno  de nosotros hemos pasado por diferentes situaciones en la vida. Algunos de esos problemas conllevan una oleada de emociones, las cuales tratamos de sobrellevar lo mejor posible. Pero hay momentos que nos rebasan y sentimos que no encontramos la salida: la perdida de un familiar, exceso de necesidad por una pareja, violencia familiar entre muchas otras más. En esos casos es posible necesitar atención especializada.</p>
+          </div>
+          <button type="button" name="button" class="siguiente" onclick="cambio(0)"><img src="img/flecha-correcta.svg" alt="Siguiente"></button>
         </main>
       </div>
       <section class="actividades" id=actividades>
@@ -108,20 +125,28 @@
       </section>
       <section id=parte_escondida>
       </section>
-      <section class="derecha">
+      <section class="derecha" id=derecha>
         <div class="organigrama">
           <h2>Organigrama</h2>
         </div>
         <form class="sugerencias" action="" method="post">
           <h2>Quejas y sigerencias</h2>
           <br>
-          <input type="text" name="usuario" placeholder="Usuario">
+          <input type="text" name="usuario" placeholder="Usuario" required>
           <br>
-          <textarea name="sugerencia" placeholder="Escribe aquí cualquier sugerencia que tengas"></textarea>
+          <textarea name="sugerencia" placeholder="Escribe aquí cualquier sugerencia que tengas" required></textarea>
           <br>
           <input type="submit" name="Enviar" value="Enviar sugerencia">
         </form>
       </section>
     </div>
+    <footer>
+      <h2>Contactános</h2>
+      <div class="redes">
+        <a href="#"> <img src="img/facebook.svg" alt="P.A.F Facebook"> Psicología de tus emociones </a>
+        <a href="https://wa.me/5217773450967">  7773450967<img src="img/whatsapp.svg" alt="Whatsapp - P.A.F Whatsapp"></a>
+        <a href="https://wa.me/5217777880080"> 7777880080 <img src="img/whatsapp.svg" alt="Whatsapp - P.A.F Whatsapp"></a>
+      </div>
+    </footer>
   </body>
 </html>
