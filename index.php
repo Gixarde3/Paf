@@ -28,7 +28,13 @@ if(isset( $_POST['Enviar'])){
     <img src="img/Fondo-abrido.png" alt="Fondo" class="fondo-abrido" id=fondo-abrido>
     <div class="parte_arriba">
       <div class="relleno_arriba">
-        <span></span>
+        <div class="direccion">
+          <p>Psic. Moisés Crespo.</p>
+        </div>
+        <div class="direccion">
+          <p>Psic. Jesús Gómez.</p>
+        </div>
+        <p>Calle Benito Juárez 3b, Col. Jardín Juárez, Jiutepec Mor. CP: 62576</p>
       </div>
       <div class="logo">
         <img src="img/personas.png" alt="PAF - Psicología al apoyo de la familia">
@@ -73,7 +79,7 @@ if(isset( $_POST['Enviar'])){
             <img src="img/proximo.svg" alt="P.A.F - Flecha de abrir" id=flecha_1 class="flecha">
           </div>
         </button>
-        <button class="opcion" onclick="deslizar(2)" id=caja_2>
+        <button class="opcion" onclick="deslizar(2)" id=caja_2 style="display: none;">
           <div class="relleno">
             <span style="width:100%; height:100%;"></span>
           </div>
@@ -141,12 +147,16 @@ if(isset( $_POST['Enviar'])){
       </section>
     </div>
     <footer>
-      <h2>Contactános</h2>
-      <div class="redes">
-        <a href="#"> <img src="img/facebook.svg" alt="P.A.F Facebook"> Psicología de tus emociones </a>
-        <a href="https://wa.me/5217773450967">  7773450967<img src="img/whatsapp.svg" alt="Whatsapp - P.A.F Whatsapp"></a>
-        <a href="https://wa.me/5217777880080"> 7777880080 <img src="img/whatsapp.svg" alt="Whatsapp - P.A.F Whatsapp"></a>
-      </div>
+      <h2>Contactános: </h2>
+      <a href="#"> <img src="img/facebook.svg" alt="P.A.F Facebook"> Psicología de tus emociones </a>
+      <a href="https://wa.me/5217773450967"><img src="img/whatsapp.svg" alt="Whatsapp - P.A.F Whatsapp"> 7773450967
+        <p>Psic. Moisés Crespo.</p>
+      </a>
+      <a href="https://wa.me/5217777880080"><img src="img/whatsapp.svg" alt="Whatsapp - P.A.F Whatsapp"> 7777880080
+        <p>Psic. Jesús Gomez.</p>
+      </a>
+      <h2>Puede encontrarnos en: </h2>
+      <p>Calle Benito Juárez 3b, Col. Jardín Juárez, Jiutepec Mor. CP: 62576</p>
     </footer>
   </body>
 </html>
