@@ -6,7 +6,7 @@ var anchoPantalla=window.innerWidth;
 var porcentajeAAbrir=0;
 console.log(anchoPantalla);
 if(anchoPantalla<=768){
-  porcentajeAAbrir=25;
+  porcentajeAAbrir=27;
 }
 else{
   porcentajeAAbrir=10;
@@ -37,7 +37,7 @@ function deslizar(numero_datos_mostrar){
   }else{
     document.getElementById('cerrarDesplegado').style='display: none; z-index:0;';
     document.getElementById('fondo-abrido').style='display: none; z-index:0;';
-    cajaEsondida.style="left:-50%; z-index:2;";
+    cajaEsondida.style="left:-100%; z-index:2;";
     for (var i = 1; i <= 5; i++) {
       var flecha=document.getElementById('flecha_'+i);
       flecha.style="-webkit-transform: rotate(0deg);-moz-transform: rotate(0deg);-ms-transform: rotate(0deg);transform: rotate(0deg);";

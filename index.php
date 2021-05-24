@@ -4,8 +4,7 @@ if(isset( $_POST['Enviar'])){
   $to="antoniochavezmarco@gmail.com";
   $subject="Sugerencia de ".$_POST['usuario'];
   $message=$_POST['sugerencia'];
-  $headers = 'From: noreply@fap.com'.'\r\n';
-  $correo=@mail($to, $subject, $message, $headers);
+  $correo=@mail($to, $subject, $message);
   if($correo){
     echo "Mensaje enviado con éxito";
   }else{
